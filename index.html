@@ -16,12 +16,14 @@ body {
   overflow-x: hidden;
 }
 
+/* HEADER */
 header {
   text-align: center;
   padding: 60px 20px;
   background: linear-gradient(135deg, #120018, #000);
   border-bottom: 2px solid #a855f7;
   box-shadow: 0 0 40px #a855f744;
+  animation: fadeDown 1s ease;
 }
 
 header h1 {
@@ -35,12 +37,14 @@ header p {
   font-size: 18px;
 }
 
+/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 40px 20px;
 }
 
+/* CARDS */
 .rule-box {
   background: rgba(20, 20, 20, 0.8);
   border: 1px solid rgba(168, 85, 247, 0.4);
@@ -49,6 +53,9 @@ header p {
   margin-bottom: 25px;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 25px rgba(126, 34, 206, 0.2);
+  transform: translateY(40px);
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
   transition: 0.3s;
 }
 
@@ -60,8 +67,10 @@ header p {
 .rule-box h2 {
   color: #c084fc;
   margin-bottom: 15px;
+  text-shadow: 0 0 10px #7e22ce;
 }
 
+/* LIST */
 ul {
   padding-left: 20px;
 }
@@ -71,10 +80,12 @@ li {
   line-height: 1.6;
 }
 
+/* GLOW TEXT */
 strong {
   color: #e9d5ff;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 25px;
@@ -84,6 +95,30 @@ footer {
   color: #aaa;
 }
 
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SCROLL BAR */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -92,6 +127,7 @@ footer {
   background: #7e22ce;
   border-radius: 10px;
 }
+
 </style>
 </head>
 
@@ -100,56 +136,207 @@ footer {
 <header>
   <h1>Règlement ViceLiberty V2</h1>
   <p>Serveur GTA RP - Expérience immersive & sérieuse</p>
-  <p><strong>Merci de respecter les règles du serveur afin de garantir une bonne expérience à tous.</strong></p>
+  <p><strong>Merci de prendre en compte et de respecter les règles du serveur a fin de garantir une bonne expérience à tous.</strong></p>
+  <p><strong>Tableau des sanctions : Afficher dans la section "Réglement"</strong></p>
 </header>
 
 <div class="container">
 
-  <div class="rule-box">
+  <div class="rule-box" style="animation-delay:0.1s">
     <h2>📜 Règles Générales</h2>
     <ul>
-      <li><strong>Respect obligatoire :</strong> Respect entre joueurs obligatoire.</li>
-      <li><strong>Cheat / Mod Menu :</strong> Bannissement permanent.</li>
-      <li><strong>Meta Gaming :</strong> Strictement interdit.</li>
-      <li><strong>Power Gaming :</strong> Strictement interdit.</li>
-      <li><strong>No Fear :</strong> Vous devez craindre pour votre personnage.</li>
-      <li><strong>Combat Logging :</strong> Quitter une scène RP est interdit.</li>
-      <li><strong>Win RP :</strong> Chercher uniquement à gagner est interdit.</li>
+      <li><strong>Respect obligatoire :</strong>
+      Chaque joueur doit respecter les autres membres du serveur.
+      Les insultes, propos discriminatoires, harcèlement, menaces,
+      provocations excessives ou comportements toxiques sont strictement interdits.</li>
+      <li><strong>REC & REPORT:</strong> Toute plainte sans REC pourra être refusée, Les REC doivent être clairs et complets, Aucun report en message privé ne sera accepté, Tout passe obligatoirement par ticket.</li>
+      <li><strong>Comportement et attitude :</strong> Les propos racistes, homophobes, sexistes ou discriminatoires sont interdits.</li>
+      <li><strong>Cheat / Mod Menu :</strong>
+      L’utilisation de logiciels de triche, scripts illégaux,
+      duplication d’argent, exploit bug ou modification du jeu
+      entraîne un bannissement permanent sans avertissement.</li>
+      <li><strong>Free Kill (FK) :</strong>
+      Tuer un joueur sans raison RolePlay valable est interdit.
+      Chaque action violente doit avoir un contexte RP cohérent.</li>
+      <li><strong>Free Punch :</strong>
+      Frapper un joueur sans raison RP est interdit.
+      Toute agression doit être justifiée par une scène RP.</li>
+      <li><strong>Free Taze :</strong>
+      tazer un joueur sans raison RP est interdit.
+      Toute agression doit être justifiée par une scène RP.</li>
+      <li><strong>Meta Gaming :</strong>
+      Utiliser des informations obtenues hors RP
+      (Discord, stream, vocal externe, live TikTok, etc.)
+      dans le jeu est strictement interdit</li>
+      <li><strong>Power Gaming :</strong>
+      Réaliser des actions impossibles dans la vraie vie
+      ou forcer une scène RP sans laisser de possibilité de réaction
+      aux autres joueurs est interdit</li>
+      <li><strong>No Fear :</strong>
+      Vous devez avoir peur pour votre personnage.
+      Ignorer une arme braquée sur vous ou agir sans crainte
+      dans des situations dangereuses est interdit.</li>
+      <li><strong>No Pain :</strong>
+      Après un accident, une fusillade ou une blessure,
+      votre personnage doit jouer les douleurs et conséquences RP.</li>
+      <li><strong>Mass RP :</strong>
+      Le serveur représente une ville vivante.
+      Vous devez agir comme si des PNJ et témoins existaient partout.</li>
+      <li><strong>Combat Logging :</strong>
+      Quitter le serveur pendant une scène RP,
+      une course-poursuite ou une action illégale est interdite et pourra entraîner des sanctions.</li>
+      <li><strong>Déconnexion abusive :</strong> Toute déconnexion volontaire pour éviter une sanction RP, pourra entraîner des sanctions administratives.</li>
+      <li><strong>Carkill :</strong>
+      Écraser volontairement des joueurs avec un véhicule
+      sans raison RP valable est interdit.</li>
+      <li><strong>Drive By :</strong>
+      Tirer depuis un véhicule sans scène RP cohérente
+      ou sans autorisation du règlement est interdit.</li>
+      <li><strong>Bunny Hop :</strong>
+      Sauter continuellement pour aller plus vite
+      ou obtenir un avantage est interdit.</li>
+      <li><strong>Use Bug :</strong>
+      Exploiter un bug du serveur pour gagner de l’argent,
+      des objets ou un avantage RP est strictement interdit.</li>
+      <li><strong>Nom RP :</strong>
+      Votre personnage doit avoir un prénom et nom réaliste.
+      Les noms trolls, insultants ou de célébrités sont interdits.</li>
+      <li><strong>Personnage RP :</strong>
+      Vous devez développer un personnage cohérent,
+      avec une histoire et un comportement réaliste.</li>
+      <li><strong>Respect du Staff :</strong>
+      Les décisions du staff doivent être respectées.
+      Les tickets abusifs, insultes staff ou troll administration
+      seront sanctionnés.</li>
+      <li><strong>Publicité :</strong>
+      Toute publicité pour un autre serveur,
+      Discord ou communauté concurrente est interdite.</li>
+      <li><strong>Contenu vocal :</strong>
+      Les soundboards abusifs, cris dans le micro,
+      spam sonore ou musiques fortes sont interdits.</li>
+      <li><strong>RP Sexuel :</strong>
+      Les scènes sexuelles forcées,
+      contenus déplacés ou comportements malsains sont interdits.</li>
+      <li><strong>Scènes illégale :</strong>
+      Toute action criminelle doit rester réaliste,
+      logique et cohérente avec votre personnage.</li>
+      <li><strong>Win RP :</strong>
+      Chercher uniquement à gagner une scène
+      sans privilégier le RolePlay est interdit.</li>
+      <li><strong>Fair Play :</strong>
+      Le but du serveur est de créer des scènes RP immersives,
+      pas de dominer les autres joueurs.</li> 
+      <li><strong>Usage de la force :</strong>
+        Un agent ne doit jamais tirer le premier, sauf en cas de danger imminent.
+         Les armes létales ne doivent donc être utilisées qu’en dernier recours ou en légitime défense. 
+         Leur utilisation doit être proportionnée au danger.</li>
+         <li><strong>Retour sur scénes :</strong> Si tu meurs Tu ne te souviens plus de la scène, Tu n’as pas le droit de revenir sur place</li>
+      <li><strong>Proportionnalité des moyens :</strong> 
+        Comportez-vous de manière adaptée à la situation car votre riposte doit toujours être proportionnelle à l'attaque.</li> 
+      <li><strong>Toxicité & Comportement Haineux :</strong> 
+        Les comportements de haine, insultes ou propos irrespectueux en dehors du cadre RP sont strictement interdits. 
+        En cas de non-respect, des sanctions lourdes, comme un bannissement permanent en jeu et sur Discord, pourront être appliquées.</li>
+      <li><strong>Course-poursuite :</strong> Les agents peuvent effectuer un PIT (d'immobilisation d'un véhicule) après 10 minutes de poursuite, sauf en cas d'abus flagrant de la part d'un joueur (No Pain, Win RP ou PowerGaming).</li>
+      <li><strong>Manœuvre PIT :</strong> La manœuvre PIT doit être réalisée à une vitesse modérée (moins de 50 km/h) et de manière professionnelle, en veillant à ne pas mettre en danger les citoyens.</li>
+      <li><strong>Reconnaissance RP :</strong> Il est interdit d’identifier un joueur ou un groupe uniquement à partir d’éléments tels qu’une voix, un véhicule ou une tenue vestimentaire.</li>
+      <li><strong>Off Road :</strong> Le off road reste interdit les véhicules adapter ainsi que le respect des roue tout terrain pour les montagnes et chemin de terre
+      Exceptions pour les groupes de bikers
+      Les groupes de bikers disposent d’une dérogation leur permettant d’utiliser des motos pour des activités illégales, sous réserve des conditions suivantes :
+      Les motos ne doivent pas emprunter des zones inaccessibles aux voitures (montagnes, escaliers, ruelles trop étroites, etc.).
+      En cas de chute d’un motard, la poursuite est immédiatement considérée comme terminée pour celui-ci.</li>
+      <li><strong>Plans mules, récupérations :</strong> Les plans mules, récupérations ainsi que les manœuvres PIT (techniques visant à immobiliser un véhicule) sont autorisés uniquement après 5 minutes de poursuite et à faible vitesse, soit moins de 50 km/h.</li>
+      <li><strong>Soin :</strong> Vous devez impérativement jouer votre Pain RP après avoir subi des dégâts.</li>
+      <li><strong>retour hôpital :</strong> pour les retour hôpital sans le vip 10% de chance de perdre vos armes " Vip vous perdez pas vos armes ".</li>
     </ul>
   </div>
 
-  <div class="rule-box">
-    <h2>🚫 Cheat & Packs illégaux</h2>
+  <div class="rule-box" style="animation-delay:0.4s">
+    <h2>🚫 PACKS NON LÉGITIMES & CHEAT</h2>
     <ul>
-      <li>Wallhack, Aimbot, Mod Menu et Macro interdits.</li>
-      <li>Le staff peut demander un contrôle PC.</li>
-      <li>Refuser un contrôle équivaut à un aveu.</li>
+      <li><strong>Un pack non légitime comprend tout fichier, modification ou logiciel donnant un avantage injuste au joueur, notamment :</strong>Mod menu, Cheat / hack, Wallhack, Aimbot, No recoil, Crosshair interdit, Texture avantageuse, Pack augmentant la visibilité, Radar modifié, Scripts interdits, Macro, Modification des fichiers du jeu pour avantage RP/PvP </li>
+      <li>Tout joueur est responsable de ses fichiers GTA, “Je ne savais pas” n’est pas une excuse, Les logs et preuves vidéo font foi, Le staff peut demander un contrôle PC à tout moment, Refuser un contrôle équivaut à un aveu. </li>
     </ul>
   </div>
 
-  <div class="rule-box">
-    <h2>🔫 Règlement Illégal</h2>
+  <div class="rule-box" style="animation-delay:0.2s">
+    <h2>🔫Réglement Illégal</h2>
     <ul>
-      <li><strong>Groupe indépendant :</strong> 6 joueurs maximum.</li>
-      <li><strong>Groupe officiel :</strong> 10 joueurs maximum.</li>
-      <li><strong>Alliances :</strong> Interdites.</li>
+      <li><strong>⚠️ Ce règlement concerne tous les groupes illégaux, organisations, gangs, cartels, MC et joueurs pratiquant une activité illégale sur le serveur.⚠️</strong>
+      <li><strong> Interdiction du tir à vue :</strong> Le tir à vue est strictement interdit sur le serveur. Toute utilisation d’armes doit être précédée de 3 sommations orales claires, espacées d’au moins 10 secondes entre chacune, pour laisser le temps à la cible de prendre en compte l’alerte et de réagir.  </li>
+      <li><strong> Définition de la sommation :</strong> Une sommation est un avertissement verbal indiquant une menace imminente. La cible doit comprendre que si elle ne se conforme pas, une action violente peut suivre.</li>
+      <li><strong> NO FEAR & Sommation :</strong> Lorsqu'un joueur effectue un No Fear, vous êtes autorisé à ouvrir le feu sans avoir à effectuer les 3 sommations habituelles. Toutefois, faites preuve de prudence et assurez-vous qu'il s'agit bien d'un cas de No Fear. En cas d'erreur, c'est vous qui serez sanctionné.
+      → Exemple : Si un joueur est braqué, mais qu'il décide de courir, monte dans un véhicule et tente de s'enfuir, vous êtes autorisé à tirer dès qu'il entre dans le véhicule.</li>
+      <li><strong> Braquage supérette :</strong>  Maximum 7 agents contre 6 braqueurs (armes légères, herse…).</li>
+      <li><strong>Groupe indépendant :</strong> 6 joueurs maximum</li>
+      <li><strong>Groupe officiel :</strong> 10 joueurs maximum</li>
+      <li><strong>Interdiction des alliances :</strong> Les alliances entre groupes sont strictement prohibées (sanction : bannissement + avertissement de groupe).
+      → Les contrats ponctuels : un groupe peut être payé pour accomplir une mission pour un autre, mais seule une des deux parties agit. Exemple : le groupe A engage le groupe B pour kidnapper un policier. Le groupe A ne doit pas intervenir.
+      <li><strong>Interraction sur les drop :</strong> au glock type berreta ,  pistol 50 , glock 17 ect pas d'arme auto pas de loot sur les mort au drop</li>
+      <li><strong>Clés véhicules :</strong> Tout joueur peut se faire voler son véhicule en dehors des zones safes. En cas de menace, vous devez obligatoirement jouer votre Fear RP et obtempérer, tout loot de véhicule ce fait a hauteur de 50% illegale.</li>
+      <li><strong>Territoires:</strong> Les territoires sont des zones spécifiques où certains groupes ont un contrôle exclusif, Les guerres de territoires doivent être validées par le staff illégal.</li>
+      <li><strong>Braquer un joueur :</strong> Interdiction de braquer sans raison RP, exemple : un joueur ne peut pas braquer un autre joueur sans l'avoir vue vendre.</li>
+      <li>Les prises d’otages doivent être sérieuses.</li>
+      <li><strong>Retour sur scénes :</strong> Si tu meurs Tu ne te souviens plus de la scène, Tu n’as pas le droit de revenir sur place</li>
+      <li><strong>Utilisation des hélicoptères :</strong> Il est interdit d’atterrir sur une scène en hélicoptère ou d’y déposer des joueurs.</li>
+      <li><strong>Attaques sur des lieux sensibles :</strong> Les assauts contre des commissariats, hôpitaux, lieux publics fréquentés ( zone de masse Interdit ).</li>
+      <li><strong>Gestion de l’argent sale :</strong> L’argent, qu’il soit propre ou sale, n’est pas identifiable en jeu. Si vous détenez plus de 30 000$ en espèces, que ce soit sur vous ou dans vos biens (propriétés, véhicules, etc.), la police peut considérer cette somme comme illégale et la saisir.</li>
+    
     </ul>
   </div>
 
-  <div class="rule-box">
+  <div class="rule-box" style="animation-delay:0.3s">
     <h2>👮 LSPD / EMS</h2>
     <ul>
-      <li>Respect des scènes RP obligatoire.</li>
-      <li>Négociations RP obligatoires.</li>
-      <li>Force proportionnée uniquement.</li>
+      <li><strong>Respect des scènes RP :</strong> obligatoire.</li>
+      <li><strong>Interdiction d’abuser des pouvoirs métier :</strong> Interdite.</li>
+      <li><strong>Les négociations doivent rester RP :</strong> Obligatoire.</li>
+      <li><strong>L’appel d’un hélicoptère en renfort :</strong> Est autorisé après 10 minutes pour maintenir un visuel sur le suspect.</li>
+      <li><strong>Véhicule endommagé :</strong> Si votre véhicule est endommagé, vous devez mettre fin à votre participation à la poursuite et retourner obligatoirement au poste.</li>
+      <li>LPSD toute fouille sur un individus ce fait toujour accompagner d’un contrôle d’identité et de vérification de casier judiciaire.</li>
+      <li><strong>Rôle d'un agent sur un braquage :</strong> Votre mission principale est de faciliter le déroulement d’une course-poursuite en incitant les suspects à quitter les lieux. Vous devez donc attendre dans votre véhicule sans chercher à forcer l’arrestation. Privilégiez les négociations, puis laissez place à la course-poursuite. Rappelez-vous que l’objectif est de s’amuser tout en offrant des scènes originales. Soyez créatifs !</li>
+      <li><strong>Les EMS / LSPD</strong> doivent jouer leur rôle correctement.</li>
+      <li><strong>Gestion de l’argent sale :</strong> L’argent, qu’il soit propre ou sale, n’est pas identifiable en jeu. Si vous détenez plus de 30 000$ en espèces, que ce soit sur vous ou dans vos biens (propriétés, véhicules, etc.), la police peut considérer cette somme comme illégale et la saisir.</li>
     </ul>
   </div>
 
+  <div class="rule-box" style="animation-delay:0.4s">
+    <h2>💼 Entreprises</h2>
+    <ul>
+      <li>Gestion sérieuse obligatoire.</li>
+      <li>Prix cohérents RP.</li>
+      <li> 2 entreprises par groupe illégal maximun.</li>
+    </ul>
+  </div>
+
+   <div class="rule-box">
+    <h2><p>Nous comprenons que perdre une scène ou les erreurs des autres puissent être frustrants, mais nous vous demandons de toujours conserver votre calme. Terminez la scène en cours de manière propre et adressez-vous au Staff par la suite pour signaler le problème. Une réponse juste (remboursement, sanctions...) sera apportée.<strong>
+    ( ⚠️ Ce règlement est susceptible d’être modifié à tout moment par le staff afin de garantir le bon fonctionnement du serveur.⚠️ ) </strong> </p></h2>
+    <ul>
+    </ul>
+
+
 </div>
+
 
 <footer>
   © 2026 ViceLiberty V2 - Tous droits réservés
 </footer>
+
+<script>
+// animation progressive des cards
+const cards = document.querySelectorAll('.rule-box');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+});
+
+cards.forEach(card => observer.observe(card));
+</script>
 
 </body>
 </html>
